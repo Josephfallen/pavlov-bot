@@ -16,7 +16,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
-__version__ = "0.7.2"
+__version__ = "Pavlov: Shack Beta"
 
 invite_link = "https://discordapp.com/api/oauth2/authorize?client_id={}&scope=bot&permissions=8192"
 
@@ -38,7 +38,8 @@ DiscordComponents(bot)
 async def on_ready():
     bot.invite = invite_link.format(bot.user.id)
     bot.aiohttp = aiohttp.ClientSession()
-    await bot.change_presence(activity=discord.Game(f"v{__version__}"))
+    await bot.change_presence(activity=discord.Game(f"{__version__}"))
+    #Sets the status^^
     logging.info(
         f"""Logged in as {bot.user}..
         Serving {len(bot.users)} users in {len(bot.guilds)} guilds
