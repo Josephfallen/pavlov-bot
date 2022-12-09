@@ -23,7 +23,7 @@
     },
     "autobalance": {
         "type": "autobalance",
-        "servers": ["serveralias4"],
+        "servers": ["default"],
         "polling_interval": 1,
         "polling_channel": 721148700868608142,
         "polling_role": 900500899166842911,
